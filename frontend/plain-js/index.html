@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<script src="main.js" defer></script>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Javascript Sample</title>
+  </head>
+  <body>
+    <h1 id="header">Welcome to my homepage</h1>
+    <button onclick="updateHeader()">Update header</button>
+
+    <div>
+      <div>
+        <p>Add new item to shopping list</p>
+        <input type="text" id="addItem" />
+        <button onclick="addShoppingItem(addItem.value)">Add</button>
+      </div>
+
+      <h2>My shopping list</h2>
+      <ul id="shoppingList"></ul>
+    </div>
+  </body>
+</html>
