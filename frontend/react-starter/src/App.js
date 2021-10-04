@@ -1,9 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Timer from './components/Timer';
-import Example from './components/Example';
-import JSX from './components/JSX';
-import Components from './components/Components';
+import logo from "./logo.svg";
+import "./App.css";
+import Timer from "./components/Timer";
+import Example from "./components/Example";
+import JSX from "./components/JSX";
+import Components from "./components/Components";
+import Lists from "./components/Lists";
+import Parent from "./components/ParentChild";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Example />
         <JSX />
         <Components />
+        <Lists />
+        <Parent />
       </header>
     </div>
   );
