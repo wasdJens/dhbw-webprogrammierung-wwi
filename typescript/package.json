@@ -1,0 +1,14 @@
+{
+  "name": "intro-to-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc index.ts"
+  },
+  "author": "Jens Reiner",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
