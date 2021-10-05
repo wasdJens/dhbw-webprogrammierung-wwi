@@ -1,0 +1,12 @@
+<h1 *ngIf="hasPermission; else missing">You have the permissions!</h1>
+<ng-template #missing>
+  <h1>You dont have permission :(</h1>
+</ng-template>
+<p>The following permissions are available for you</p>
+<ul>
+  <li *ngFor="let permission of permissions">
+    {{ permission }}
+  </li>
+</ul>
+
+<button (click)="handleTogglePermissions()">Change permission</button>
