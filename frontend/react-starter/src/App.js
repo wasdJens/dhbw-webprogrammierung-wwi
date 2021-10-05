@@ -6,6 +6,8 @@ import JSX from "./components/JSX";
 import Components from "./components/Components";
 import Lists from "./components/Lists";
 import Parent from "./components/ParentChild";
+import Smart from "./components/SmartDumb";
+import MainPage from "./components/ComponentAsProp";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Components />
         <Lists />
         <Parent />
+        <Smart />
+        <MainPage />
       </header>
     </div>
   );
