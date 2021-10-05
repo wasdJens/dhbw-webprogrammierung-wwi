@@ -31,7 +31,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function printGuess(guess) {
+const printGuess = (guess) => {
   console.log(`Your guess is: ${guess}`);
 }
 
