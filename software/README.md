@@ -22,6 +22,12 @@ Folgende Software kommt in der Vorlesung zum Einsatz und sollte auf ihren Gerät
 * https://www.postman.com/
 * https://www.postman.com/downloads/?utm_source=postman-home 
 
+
+## Docker
+
+* https://www.docker.com/
+* https://www.docker.com/get-started
+
 ## Git
 
 * https://git-scm.com/downloads
