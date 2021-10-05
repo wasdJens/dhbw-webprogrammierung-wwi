@@ -1,6 +1,11 @@
 # DHBW Webprogrammierung-wwi Software
 
-Folgende Software kommt in der Vorlesung zum Einsatz und sollte auf ihren Geräten installiert sein. Folgendes Dokument dient als Referenz wie Sie die Software installieren könnne
+Folgende Software kommt in der Vorlesung zum Einsatz und sollte auf ihren Geräten installiert sein. Folgendes Dokument dient als Referenz wie Sie die Software installieren können
+
+## Accounts
+
+* Github Konto 
+  * Entweder neues eröffnen oder bestehendes verwenden
 
 ## Code Editor
 
