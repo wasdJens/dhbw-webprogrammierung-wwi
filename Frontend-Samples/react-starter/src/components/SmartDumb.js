@@ -36,7 +36,7 @@ class Dumb extends React.Component {
       backgroundColor: this.props.type === "Warning" ? "yellow" : "red",
       color: "black",
       border: "3px solid white",
-      "border-radius": "3px",
+      borderRadius: "3px",
     };
 
     return (
