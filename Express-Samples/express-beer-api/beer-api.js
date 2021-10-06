@@ -49,7 +49,8 @@ app.post('/beer', (req, res) => {
         resolveBadRequest(res, 'Missing "taste" property');
     }
     beers.push(req.body);
-    res.sendStatus(200);
+    res.statusCode = 200;
+    res.json(req.body);
 });
 
 app.delete('/beer/:name', (req, res) => {
