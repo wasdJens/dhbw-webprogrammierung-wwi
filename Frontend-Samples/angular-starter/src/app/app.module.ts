@@ -9,6 +9,8 @@ import { StarterDirectivesComponent } from './starter-directives/starter-directi
 import { TodoComponent } from './todo/todo.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ObsSampleComponent } from './obs-sample/obs-sample.component';
+import { ObsSample2Component } from './obs-sample2/obs-sample2.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ChildComponent } from './child/child.component';
     StarterDirectivesComponent,
     TodoComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ObsSampleComponent,
+    ObsSample2Component,
   ],
   imports: [
     BrowserModule,
