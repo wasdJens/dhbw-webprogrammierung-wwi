@@ -8,6 +8,7 @@ import Lists from "./components/Lists";
 import Parent from "./components/ParentChild";
 import Smart from "./components/SmartDumb";
 import MainPage from "./components/ComponentAsProp";
+import BeerComponent from "./api-communication/Beer";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Parent />
         <Smart />
         <MainPage />
+        <BeerComponent />
       </header>
     </div>
   );
