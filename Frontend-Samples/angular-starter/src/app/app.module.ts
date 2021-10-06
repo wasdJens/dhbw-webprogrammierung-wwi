@@ -13,6 +13,8 @@ import { ObsSampleComponent } from './obs-sample/obs-sample.component';
 import { ObsSample2Component } from './obs-sample2/obs-sample2.component';
 import { ObsSample3Component } from './obs-sample3/obs-sample3.component';
 import { ObsSample4Component } from './obs-sample4/obs-sample4.component';
+import { BeerComponent } from './beer-api/beer/beer.component';
+import { CreateBeerComponent } from './beer-api/create-beer/create-beer.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ObsSample4Component } from './obs-sample4/obs-sample4.component';
     ObsSample2Component,
     ObsSample3Component,
     ObsSample4Component,
+    BeerComponent,
+    CreateBeerComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<h1>Beers!</h1>
+<app-create-beer></app-create-beer>
+<ul>
+  <li *ngFor="let beer of beers$ | async">
+      {{ beer.name }} {{ beer.taste }}
+  </li>
+</ul>
