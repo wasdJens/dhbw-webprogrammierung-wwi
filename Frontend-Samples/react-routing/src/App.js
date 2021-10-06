@@ -4,6 +4,8 @@
 
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import RouteParams from "./samples/RouteParams";
+import RouteQuery from "./samples/RouteQuery";
 
 export default function App() {
   return (
