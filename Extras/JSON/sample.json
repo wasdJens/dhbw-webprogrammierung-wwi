@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "name": "Jens Reiner",
+      "age": 25,
+      "roles": ["READ", "UPDATE", "DELETE", "CREATE"]
+    },
+    {
+      "name": "Philipp Reiner",
+      "age": "28",
+      "roles": []
+    }
+  ],
+  "version": "2.4.5",
+  "softwareName": "Test Software",
+  "active": true
+}
