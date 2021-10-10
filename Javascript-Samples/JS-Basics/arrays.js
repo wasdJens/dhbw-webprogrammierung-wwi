@@ -3,6 +3,9 @@ const cars = ['Mercedes', 'Audi', 'BMW', 'Volkswagen'];
 console.log(cars[2]) // BMW
 console.log(cars['length']) // 4
 
+const randomArray = ['Hallo Welt', 25, {name: 'Jens', age: '25'}, false];
+console.log(randomArray);
+
 /**
  * Basic Array Methods
  */
