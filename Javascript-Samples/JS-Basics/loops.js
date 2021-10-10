@@ -36,3 +36,9 @@ const user = {
 for (const i in user) {
   console.log(i); // name, age, gender
 }
+
+const array1 = ['A', 'B', 'C', 'D'];
+
+for (const char of array1) {
+  console.log(char); // A, B, C, D
+}
