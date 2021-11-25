@@ -77,3 +77,48 @@ Ein paar Beispiele:
 * Verwenden Sie moderne Javascript Syntax und Funktionen (z.B. Spread Operator, Array Methoden etc.)
 * Achten Sie bei Stackoverflow Antworten / Lösungen auf das Alter der Antworten (Javascript wandelt sich umglaublich schnell und eine Lösung von vor 4 Jahren ist vielleicht nicht mehr ganz up 2 date)
 * Besuchen Sie die weiterführenden Links und schauen Sie sich auch die Offiziellen Dokumentationen der einzelnen Frameworks an
+
+> Welche Rolle spielt der "Benutzer" in den Hinweisen ganz unten in der Prüfungsleistung?
+
+Die Bezeichnung "Benutzer" ist einfach nur eine Hilfe für Sie - es soll aber kein Benutzersystem oder ähnliches abgebildet werden (Außer man wählt soetwas als Aufgabe 3 z.B.). 
+
+Ein Benutzer ist einfach jemand der sich lokal durch die Anwendung einmal durchklicken kann. 
+
+Natürlich bedeutet dies auch, wenn Sie kein Benutzer System implementieren können Sie nur schwer ihre API absichern (D.h. Löschen z.B. könnte jeder) - Dies ist aber in diesem Fall gewollt :). 
+
+> Zeitlich begrenzte Angebote in der Anforderung
+
+Denken Sie hier einfach mal ganz einfach - Sie können Ihr System z.B. designen, dass Automatisch neue Angebote direkt nach 15 Minuten ablaufen. Sie können aber auch das Anlegen um einen User Input erweitern, wo der User z.B. eine Zeitspanne einstellen darf. 
+
+Generell gilt aber: Bauen Sie es ganz einfach auf. Neues Angebot -> Fixe Zeit von 15 Minuten -> Angebot geschlossen. Mehr Logik reinbauen können Sie im Nachgang immernoch :) 
+
+> Anforderungsdokument Funktionale / Nicht funtkionale Anforderungen
+
+Sind nicht explizit als Abgabe gefragt aber generell gilt: Alles was Sie an Dokumentation haben und machen hilft Ihnen und auch uns später bei der Korrektur d.h. geben Sie sowas gerne alles einfach ab.
+
+Es ist aber nicht explit Teil der Prüfungsleistung. 
+
+> Prüfungsleistung: Satz: "weil andere Unternehmen in der Zukunft ihren Kunden dasselbe Portal anbieten möchten"
+
+Ist der versteckte Satz, dass Sie irgendwie eine REST Schnittstelle anbieten sollten d.h. Endpunkte damit später andere Portale auch ihre Daten abfragen kann. Natürlich werden keine weiteren Portale direkt gebaut. Dieser Satz soll Ihnen einfach nur einmal beschreiben wie Kunden in Echt gerne mal denken und welches Technische Konzept sich dahinter verbirgt (Hier eben REST API z.B.)
+
+> Was für ein Unternehmen ist das Fiktive Unternehmen aus der Prüfungsleistung? 
+
+* Frei auswhählbar
+* Haftungs Sachen weil sie mit "Geld" arbeiten können sie theoretisch argumentieren, dass sie einen technischen Prototypen liefern um eine Machbarkeit zu zeigen. Haftungs Frage selbst liegt dann auch beim Kunden. Sind aber nicht Teil der Prüfungsleistung (Wir beschäftigen uns ja mit der Webprogrammierung im Generellen und weniger mit der Rechtsgrundlage) 
+  * Als Softwareunternehmen aber z.B. in der Realität würden Sie dann einfach (In ihr Anforderungsdokument z.B.) definieren, dass Sie sich an gewisse ISO Vorgaben halten im Bezug auf Sicherheit etc.
+
+> Was für Tools & andere freie Software können Sie verwenden für die Prüfungsleistung?
+
+Software Pakete können beliebig kombiniert werden d.h. sie können auch weiter Open Source Tools / etc. nutzen die Ihnen das entwickeln leichter machen
+	* z.B. ein fertiges User System was sie nur noch einsetzen müssen
+	* Auch bei Datenbanken gibt es keine Einschränkungen
+	* Wenn die externe Software vlt sehr leicht zu bedienen ist aber Ihren Use-Case oder Problemstellung löst dann verwenden Sie diese gerne
+		* Einfache Pakete etc. sind sogar eher willkommen - Sie wollen ein Softwareproblem lösen und finden etwas passendes dazu, dann verwenden Sie das auch einfach
+		* Ihre Lösung wird nicht an der Komplexität gemessen
+			* Keep Software simple ;) 
+
+> Inspiration / Referenzen auch wie sie z.B. ein user System umsetzen können
+
+* Ein einfaches selber schreiben (z.B. username + passwort) (Bitte Passwörter hashen und salten versteht sich) 
+* Etwas fertiges nehmen (Einfach mal node user management googeln oder ähnliches)
