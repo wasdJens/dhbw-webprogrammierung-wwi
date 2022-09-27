@@ -1,3 +1,0 @@
-## Setup
-
-Run `npm install`
