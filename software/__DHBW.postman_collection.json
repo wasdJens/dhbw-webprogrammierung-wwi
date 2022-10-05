@@ -290,6 +290,36 @@
 			"name": "Example Requests",
 			"item": [
 				{
+					"name": "Post Against Reqbin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Test\": \"Sample Data\",\n    \"Id\": 1234\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqbin.com/echo/post/json",
+							"protocol": "https",
+							"host": [
+								"reqbin",
+								"com"
+							],
+							"path": [
+								"echo",
+								"post",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "DHBW Webseite",
 					"request": {
 						"method": "GET",
@@ -358,6 +388,123 @@
 							],
 							"path": [
 								"headers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - PUT - Form Data Body",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "test",
+									"value": "abc123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://httpbin.org/put",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"put"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - Delete - Args id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://httpbin.org/delete?id=123",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - Sample JSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/json",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - JPEG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/image/jpeg",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"image",
+								"jpeg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - SVG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/image/svg",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"image",
+								"svg"
 							]
 						}
 					},
