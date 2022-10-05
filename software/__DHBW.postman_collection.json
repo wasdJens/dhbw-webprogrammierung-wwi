@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "2b7cc537-8952-44ab-8a45-3d56de50517c",
+		"name": "__DHBW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Pokemon Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon/ditto/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon",
+								"ditto",
+								""
+							]
+						},
+						"description": "All the Pokémon data you'll ever need in one place,\neasily accessible through a modern RESTful API."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for Pokemon.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Comics",
+			"item": [
+				{
+					"name": "XKCD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://xkcd.com/info.0.json",
+							"protocol": "https",
+							"host": [
+								"xkcd",
+								"com"
+							],
+							"path": [
+								"info.0.json"
+							]
+						},
+						"description": "Returns the latest XKCD comic."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for comics.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Studio Ghibli",
+			"item": [
+				{
+					"name": "Films",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ghibliapi.herokuapp.com/films",
+							"protocol": "https",
+							"host": [
+								"ghibliapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"films"
+							]
+						},
+						"description": "The Films endpoint returns information about all of the Studio Ghibli films."
+					},
+					"response": []
+				},
+				{
+					"name": "People",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ghibliapi.herokuapp.com/people",
+							"protocol": "https",
+							"host": [
+								"ghibliapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"people"
+							]
+						},
+						"description": "The People endpoint returns information about all of the Studio Ghibli people. This broadly includes all Ghibli characters, human and non."
+					},
+					"response": []
+				},
+				{
+					"name": "Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ghibliapi.herokuapp.com/locations",
+							"protocol": "https",
+							"host": [
+								"ghibliapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"locations"
+							]
+						},
+						"description": "The Locations endpoint returns information about all of the Studio Ghibli locations. This broadly includes lands, countries, and places."
+					},
+					"response": []
+				},
+				{
+					"name": "Species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ghibliapi.herokuapp.com/species",
+							"protocol": "https",
+							"host": [
+								"ghibliapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"species"
+							]
+						},
+						"description": "The Species endpoint returns information about all of the Studio Ghibli species. This includes humans, animals, and spirits et al."
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ghibliapi.herokuapp.com/vehicles",
+							"protocol": "https",
+							"host": [
+								"ghibliapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"vehicles"
+							]
+						},
+						"description": "The Vehicles endpoint returns information about all of the Studio Ghibli vechiles. This includes cars, ships, and planes."
+					},
+					"response": []
+				}
+			],
+			"description": "The Studio Ghibli API catalogs the people, places, and things found in the worlds of Ghibli.\n\nWebsite - https://ghibliapi.herokuapp.com/#"
+		},
+		{
+			"name": "dhbw-api-server",
+			"item": [
+				{
+					"name": "PING Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ping",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "beer-api-database",
+			"item": [
+				{
+					"name": "Create Beer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nattheimer\",\n    \"taste\": \"Good\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/beer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"beer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Beers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/beers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"beers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Example Requests",
+			"item": [
+				{
+					"name": "DHBW Webseite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "www.heidenheim.dhbw.de",
+							"host": [
+								"www",
+								"heidenheim",
+								"dhbw",
+								"de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - User Agent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/user-agent",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"user-agent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/ip",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"ip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTPBIN - IP Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/headers",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"headers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "default"
+		}
+	]
+}
