@@ -13,6 +13,7 @@
    - Offizielle Webseite https://www.postman.com/
    - Sie benötigen **KEINEN** Account für die Nutzung von Postman
    - Im Ordner "Software" befindet sich auch die Postman Collection die Sie importieren können
+   - Die Collection wird im Laufe der Vorlesung vermutlich auch immer wieder geupdated - Ab und zu diese neu zu importieren kann sich also lohnen
   
  - Google Chrome als Web Browser
    - Offizielle Webseite https://www.google.com/chrome/
