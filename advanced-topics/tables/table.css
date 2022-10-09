@@ -1,0 +1,29 @@
+html {
+  font-family: sans-serif;
+}
+
+table {
+  border: 2px solid black;
+}
+
+td, th {
+  border: 1px dotted grey;
+  padding: 8px 16px;
+}
+
+th {
+  background-color: gainsboro;
+}
+
+caption {
+  padding: 8px;
+}
+
+tfoot {
+  font-weight: bold;
+  background-color: lightyellow;
+}
+
+thead {
+  font-style: italic;
+}
