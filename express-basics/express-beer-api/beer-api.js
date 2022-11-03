@@ -44,9 +44,11 @@ app.get('/beer/:name', (req, res) => {
 app.post('/beer', (req, res) => {
     if (!req.body.hasOwnProperty('name')) {
         resolveBadRequest(res, 'Missing "name" property');
+        return;
     }
     if (!req.body.hasOwnProperty('taste')) {
         resolveBadRequest(res, 'Missing "taste" property');
+        return;
     }
     beers.push(req.body);
     res.statusCode = 200;
