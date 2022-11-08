@@ -7,7 +7,7 @@ async function myFetch() {
       Accept: "application/json",
     },
   });
-  console.log(result.json);
+  console.log(await result.json());
 };
 
 myFetch();
