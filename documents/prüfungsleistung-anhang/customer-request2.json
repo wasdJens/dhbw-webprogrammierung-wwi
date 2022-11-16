@@ -5,7 +5,9 @@
   "customer": "Studentenbuden AG",
   "entry": {
     "type": "apartment",
-    "address": "Am bekannten Platz 28, 89522 Heidenheim an der Brenz",
+    "address": "Am bekannten Platz 28",
+    "postal": 89522,
+    "city": "Heidenheim an der Brenz",
     "size": 34,
     "comment": "Kleine Wohnung für Studenten, Möbiliert, Gute lage, Preiswert",
     "shortHand": "Studenten Wohnung am bekannten Platz 28"

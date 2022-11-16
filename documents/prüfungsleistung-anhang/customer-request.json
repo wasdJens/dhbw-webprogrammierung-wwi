@@ -5,7 +5,9 @@
   "customer": "Gut & Unbezahlbar GmbH",
   "entry": {
     "type": "house",
-    "address": "Beispielstraße 56, 89522 Heidenheim an der Brenz",
+    "address": "Beispielstraße 56",
+    "postal": 89522,
+    "city": "Heidenheim an der Brenz",
     "size": 246,
     "comment": "Ruhige Lage, mitten im Zentrum",
     "shortHand": "Objekt AB-246"
