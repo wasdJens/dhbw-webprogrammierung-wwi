@@ -6,7 +6,7 @@ function square(number) {
 console.log(square(5)); // 25
 
 // Function parameter example pass by reference
-var phone = {
+let phone = {
   make: 'Apple',
   model: 'iPhone',
   year: '2021'
@@ -29,7 +29,7 @@ console.log(square(5)) // 25
 // Function as parameter
 const upperCase = function(value) { return value.toUpperCase()}
 
-function transformUserInput(uppercase, input) {
+function transformUserInput(upperCase, input) {
   return upperCase(input);
 }
 
