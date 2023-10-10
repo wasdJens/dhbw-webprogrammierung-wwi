@@ -1,4 +1,4 @@
-const http = require("http");
+import { request } from "http";
 
 const options = {
   host: "jsonplaceholder.typicode.com",
@@ -16,7 +16,7 @@ const data = {
     userId: 1,
 }
 
-const request = http.request(options, (res) => {
+const req = request(options, (res) => {
     let data = '';
 
     res.on('data', (chunk) => {
@@ -28,5 +28,5 @@ const request = http.request(options, (res) => {
     })
 })
 
-request.write(JSON.stringify(data));
-request.end();
+req.write(JSON.stringify(data));
+req.end();

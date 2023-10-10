@@ -1,4 +1,4 @@
-const http = require("http");
+import { request } from "http";
 
 const options = {
   host: "jsonplaceholder.typicode.com",
@@ -9,7 +9,7 @@ const options = {
   },
 };
 
-const request = http.request(options, (res) => {
+const req = request(options, (res) => {
   console.log(res.statusCode);
 });
-request.end();
+req.end();
