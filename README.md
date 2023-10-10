@@ -5,9 +5,9 @@ Source Code Collection for the DHBW Webprogrammierung Lecture
 
 | Folder | Description |
 |:------:|-------------|
-| `services` | Includes technical implementations of background services that are part of other samples during the lecture |
-| `js-basics` | Includes all samples that are part of the javascript introduction |
-| `node-basics` | Includes all samples that are part of the node introduction |
-| `express-basics` | Includes all samples that are part of the express introduction |
-| `frontend-basics` | Includes all samples that are part of the frontend introduction |
-| `ts-basics` | Includes all samplares that are part of the typescript introduction |
+| `advanced-topics` | Includes samples related to the advanced topics sections |
+| `backend-development` | Everything around the development of webservers and so on |
+| `frontend-development` | Everything around the development of webclients and so on |
+| `javascript-development` | Everything around the basics of javascript |
+| `software` | Includes guidelines how to install required software for the lecture and the sample postman collection |
+| `typescript-development` | Everything around the basics of typescript |

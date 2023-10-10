@@ -1,1 +1,0 @@
-export const SERVER_NAME = 'dhbw-api-server';
