@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
+import { join } from 'path';
 const app = express();
-const path = require('path');
 const port = 8080;
 
 /**
@@ -56,7 +56,7 @@ app.listen(port, () => {
 
 function getOptions() {
   const options = {
-    root: path.join(__dirname, 'files'),
+    root: join(__dirname, 'files'),
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),

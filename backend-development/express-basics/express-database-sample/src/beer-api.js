@@ -1,10 +1,10 @@
-const { db } = require("./database");
-const express = require("express");
+import { db } from "./database";
+import express, { urlencoded, json } from "express";
 const app = express();
 const port = 8080;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(urlencoded({ extended: true }));
+app.use(json());
 
 async function getBeers() {
   try {

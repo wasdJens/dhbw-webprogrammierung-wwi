@@ -1,8 +1,8 @@
-const express = require("express");
+import express, { json } from "express";
 const app = express();
 const port = 8080;
 
-app.use(express.json());
+app.use(json());
 
 app.get("/", (req, res) => {
   console.log("Got a GET request on `/`");

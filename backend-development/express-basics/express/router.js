@@ -1,5 +1,5 @@
-const express = require('express');
-const cars = require('./cars');
+import express from 'express';
+import cars from './cars';
 const app = express();
 const port = 8080;
 

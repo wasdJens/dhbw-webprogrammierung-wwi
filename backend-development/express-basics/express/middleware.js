@@ -1,5 +1,4 @@
-// @ts-nocheck
-const express = require('express');
+import express from 'express';
 const app = express();
 const port = 8080;
 
@@ -24,7 +23,7 @@ const requestTime = (req, res, next) => {
 app.use(requestTime);
 
 app.get('/time', (req, res) => {
-    var response = 'Hello World!<br>'
+    let response = 'Hello World!<br>'
     response = `<small>Requested at: ${req.requestTime} </small>`;
     res.send(response);
 })
