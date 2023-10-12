@@ -1,10 +1,10 @@
 // The following examples can also be run inside the browser
 
 function test() { return "Hello World"};
-test(); // "Hello World"
+console.log(test()); // "Hello World"
 
 async function test() { return "Hello World"};
-test(); // Promise
+console.log(test()); // Promise
 
 test().then((value) => console.log(value)); // Hello World
 
