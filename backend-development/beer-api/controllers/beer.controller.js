@@ -45,6 +45,16 @@ beerRouteController.get("/", (req, res) => {
         href: `http://${req.headers.host}/api/v1/beers`,
         action: "POST",
       },
+      {
+        rel: "edit",
+        href: `http://${req.headers.host}/api/v1/beers/{id}`,
+        action: "PUT",
+      },
+      {
+        rel: "delete",
+        href: `http://${req.headers.host}/api/v1/beers/{id}`,
+        action: "DELETE",
+      }
     ],
   };
   res.json(apiResponse);
