@@ -15,7 +15,7 @@ docker compose up
 
 * Visit `localhost:5050` in your browser
 * Login into PgAdmin with `admin@admin.com` and `root` as password
-* Connect to the postgres server by right clicking on servers and create
+* Connect to the postgres server by right clicking on servers and register - server
 * Fill out the form: (Password for the Database is also root)
 
 ![](firefox_O5Ve4XwAJW.png)

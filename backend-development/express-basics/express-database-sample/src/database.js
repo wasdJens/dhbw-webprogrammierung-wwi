@@ -1,4 +1,6 @@
-import pgp from 'pg-promise';
+import pgPromise from 'pg-promise';
+
+const pgp = pgPromise({});
 
 const cn = {
   host: 'localhost',
@@ -9,6 +11,4 @@ const cn = {
 }
 const db = pgp(cn);
 
-export default {
-  pgp, db
-}
+export default db;

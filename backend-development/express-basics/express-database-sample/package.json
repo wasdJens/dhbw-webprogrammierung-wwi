@@ -10,7 +10,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "pg-promise": "^10.11.0",
+    "pg-promise": "latest",
     "express": "^4.17.1"
   }
 }

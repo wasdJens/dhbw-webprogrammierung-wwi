@@ -1,4 +1,4 @@
-import { db } from "./database";
+import db from "./database.js";
 import express, { urlencoded, json } from "express";
 const app = express();
 const port = 8080;
@@ -12,6 +12,7 @@ async function getBeers() {
     return beers;
   } catch (e) {
     console.error(e);
+    throw e;
   }
 }
 
@@ -30,17 +31,15 @@ async function createBeer(name, taste) {
 }
 
 app.get('/beers', async (req, res) => {
-  const beers = await getBeers();
-  if (beers.length === 0) {
-    resolveNotFound(res, `No beers found 🥺`);
-  } else {
-    res.statusCode = 200;
-    res.json(beers);
-    res.end();
+  try {
+    const beers = await getBeers();
+    res.status(200).json(beers);
+  } catch (e) {
+    res.sendStatus(500);
   }
 });
 
-app.post("/beer", async (req, res) => {
+app.post("/beers", async (req, res) => {
   if (!req.body.hasOwnProperty("name")) {
     resolveBadRequest(res, 'Missing "name" property');
   }
@@ -48,7 +47,7 @@ app.post("/beer", async (req, res) => {
     resolveBadRequest(res, 'Missing "taste" property');
   }
   if (await createBeer(req.body.name, req.body.taste)) {
-    res.sendStatus(200);
+    res.sendStatus(201);
   } else {
     res.sendStatus(500);
   }
@@ -58,12 +57,6 @@ app.listen(port, () => {
   console.log("Running...");
 });
 
-function resolveNotFound(res, message) {
-  res.statusCode = 404;
-  res.send(message);
-  res.end();
-  return;
-}
 
 function resolveBadRequest(res, message) {
   res.statusCode = 400;
