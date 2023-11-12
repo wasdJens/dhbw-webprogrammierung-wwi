@@ -8,10 +8,10 @@ import BeerList3 from './components/lists/BeerList3.vue';
 
 <template>
   <h1 class="title">Hello Vue!</h1>
-  <!-- <Beer></Beer> -->
+  <Beer></Beer>
   <!-- <BeerList></BeerList> -->
   <!-- <BeerList2></BeerList2> -->
-  <BeerList3></BeerList3>
+  <!-- <BeerList3></BeerList3> -->
 </template>
 
 <style scoped>
