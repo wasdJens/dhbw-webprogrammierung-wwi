@@ -1,5 +1,5 @@
 import express from 'express';
-import cars from './cars';
+import cars from './cars.js';
 const app = express();
 const port = 8080;
 
