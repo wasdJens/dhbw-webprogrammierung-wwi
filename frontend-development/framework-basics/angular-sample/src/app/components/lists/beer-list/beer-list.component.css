@@ -1,0 +1,6 @@
+.beer-list {
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

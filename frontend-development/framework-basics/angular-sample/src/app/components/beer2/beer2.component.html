@@ -1,0 +1,10 @@
+<div class="beer-card">
+  <div class="beer-card-header">
+    <fa-icon [icon]="faBeerBugEmpty"></fa-icon>
+    <h3>{{beer.name}}</h3>
+  </div>
+  <div class="beer-card-body">
+    <span>Taste: {{beer.taste}}</span>
+    <ng-content></ng-content>
+  </div>
+</div>

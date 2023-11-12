@@ -1,0 +1,12 @@
+<div *ngIf="isLoading; else list">Loading...</div>
+<ng-template #list>
+  <div>
+    <h2>Beer List</h2>
+    <app-beer-create (create)="addBeerItem($event)"></app-beer-create>
+    <div class="beer-list">
+      <app-beer2 *ngFor="let beer of beers" [beer]="beer">
+        <app-beer-vote></app-beer-vote>
+      </app-beer2>
+    </div>
+  </div>
+</ng-template>

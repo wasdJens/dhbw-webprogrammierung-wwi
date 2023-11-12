@@ -1,0 +1,12 @@
+.beer-card {
+  border: 2px solid black;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+
+.beer-card-header {}
+
+.beer-card-body {}
