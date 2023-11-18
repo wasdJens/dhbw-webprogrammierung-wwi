@@ -29,6 +29,7 @@ function BeerCreate({ addBeerItem }) {
       addBeerItem({
         name: response.createdItem.name,
         taste: response.createdItem.taste,
+        id: response.createdItem.id,
       });
     }
   };
@@ -37,15 +38,19 @@ function BeerCreate({ addBeerItem }) {
     <div>
       <h2>Create new Beer</h2>
       <div className="beer-create-inputs">
-        <label>
-          Beer Name:
-          <input type="text" value={beer.name} onChange={handleNameChange} />
-        </label>
-        <label>
-          Beer Taste:
-          <input type="text" value={beer.taste} onChange={handleTasteChange} />
-        </label>
-        <button onClick={handleCreate}>Create</button>
+      <label>
+            Beer Name:
+            <input type="text" value={beer.name} onChange={handleNameChange} />
+          </label>
+          <label>
+            Beer Taste:
+            <input
+              type="text"
+              value={beer.taste}
+              onChange={handleTasteChange}
+            />
+          </label>
+          <button onClick={handleCreate}>Create</button>
       </div>
     </div>
   );

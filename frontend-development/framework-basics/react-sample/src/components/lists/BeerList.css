@@ -4,3 +4,8 @@
   flex-direction: column;
   gap: 4px;
 }
+
+.beer-list a {
+  text-decoration: none;
+  color: black;
+}

@@ -1,20 +1,19 @@
-import './App.css'
-import Beer from './components/beer/Beer'
-import BeerCreate from './components/BeerCreate'
-import BeerList from './components/lists/BeerList'
-import BeerList2 from './components/lists/BeerList2'
-import BeerList3 from './components/lists/BeerList3'
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <>
-      <h1 className='title'>Hello React!</h1>
-      <Beer></Beer>
-      {/* <BeerList></BeerList> */}
-      {/* <BeerList2></BeerList2> */}
-      {/* <BeerList3></BeerList3> */}
-    </>
-  )
+    <div className="app-container">
+      <h1 className="title">Hello React!</h1>
+      <div className="app-content-container">
+        <Navigation />
+        <div className="app-content">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -3,6 +3,7 @@ import Beer2 from "../beer/Beer2";
 import BeerVote from "../BeerVote";
 import { useEffect, useState } from "react";
 import BeerCreate from "../BeerCreate";
+import { Link } from "react-router-dom";
 
 function BeerList3() {
   const [beers, setBeers] = useState([]);
@@ -35,9 +36,11 @@ function BeerList3() {
         <div className="beer-list">
           {beers.map((beer, index) => {
             return (
-              <Beer2 key={index} beer={beer}>
+              <Link to={`/beers/${beer.id}`} key={index}>
+              <Beer2 beer={beer}>
                 <BeerVote></BeerVote>
               </Beer2>
+            </Link>
             );
           })}
         </div>
