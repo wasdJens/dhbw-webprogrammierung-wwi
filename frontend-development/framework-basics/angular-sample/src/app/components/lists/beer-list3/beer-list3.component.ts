@@ -4,6 +4,7 @@ import { Beer2Component } from '../../beer2/beer2.component';
 import { BeerVoteComponent } from '../../beer-vote/beer-vote.component';
 import { HttpClient } from '@angular/common/http';
 import { BeerCreateComponent } from '../../beer-create/beer-create.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-beer-list3',
@@ -13,6 +14,7 @@ import { BeerCreateComponent } from '../../beer-create/beer-create.component';
     Beer2Component,
     BeerVoteComponent,
     BeerCreateComponent,
+    RouterLink,
   ],
   templateUrl: './beer-list3.component.html',
   styleUrl: './beer-list3.component.css',

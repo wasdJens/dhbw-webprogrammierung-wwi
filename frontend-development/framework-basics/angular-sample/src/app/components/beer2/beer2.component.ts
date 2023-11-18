@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBeerMugEmpty } from '@fortawesome/free-solid-svg-icons';
+import { Beer } from '../../services/beer.service';
 
 @Component({
   selector: 'app-beer2',
@@ -11,7 +12,7 @@ import { faBeerMugEmpty } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './beer2.component.css',
 })
 export class Beer2Component {
-  @Input() beer!: { name: string; taste: string };
+  @Input() beer!: Beer | null;
 
   faBeerBugEmpty = faBeerMugEmpty;
 }
