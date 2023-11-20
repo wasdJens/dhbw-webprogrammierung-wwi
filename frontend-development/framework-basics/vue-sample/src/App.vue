@@ -1,17 +1,17 @@
 <script setup>
-import Beer from './components/beer/Beer.vue';
-import BeerList from './components/lists/BeerList.vue';
-import BeerList2 from './components/lists/BeerList2.vue';
-import BeerList3 from './components/lists/BeerList3.vue';
-
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
-  <h1 class="title">Hello Vue!</h1>
-  <Beer></Beer>
-  <!-- <BeerList></BeerList> -->
-  <!-- <BeerList2></BeerList2> -->
-  <!-- <BeerList3></BeerList3> -->
+  <div class="app-container">
+    <h1 class="title">Hello Vue!</h1>
+    <div class="app-content-container">
+      <Navigation></Navigation>
+      <div class="app-content">
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -19,5 +19,19 @@ import BeerList3 from './components/lists/BeerList3.vue';
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex-grow: 1;
 }
 </style>

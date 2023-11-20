@@ -2,17 +2,18 @@
 import Beer2 from "../beer/Beer2.vue";
 import BeerVote from "../BeerVote.vue";
 import BeerCreate from "../BeerCreate.vue";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { fetchBeers } from "../../api/api";
 
 const isLoading = ref(true);
 const beers = ref(null);
 
-fetch("http://localhost:8080/api/v1/beers").then((response) => {
-  return response.json();
-}).then((data) => {
-  beers.value = data.items;
+onMounted(async () => {
+  const data = await fetchBeers();
+  beers.value = data;
   isLoading.value = false;
-});
+  console.log(beers.value)
+})
 </script>
 
 <template>
@@ -21,9 +22,15 @@ fetch("http://localhost:8080/api/v1/beers").then((response) => {
     <h2>Beer List</h2>
     <BeerCreate @createBeer="beers.push($event)"></BeerCreate>
     <div class="beer-list">
-      <Beer2 v-for="(beer, index) in beers" :key="index" :beer="beer">
-        <BeerVote></BeerVote>
-      </Beer2>
+      <router-link
+        :to="`/beers/${beer.id}`"
+        v-for="(beer, index) in beers"
+        :key="index"
+      >
+        <Beer2 :beer="beer">
+          <BeerVote></BeerVote>
+        </Beer2>
+      </router-link>
     </div>
   </div>
 </template>
@@ -34,5 +41,10 @@ fetch("http://localhost:8080/api/v1/beers").then((response) => {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.beer-list a {
+  text-decoration: none;
+  color: black;
 }
 </style>
