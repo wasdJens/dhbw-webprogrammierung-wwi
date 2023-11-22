@@ -4,6 +4,7 @@ import BeerVote from "../BeerVote";
 import { useEffect, useState } from "react";
 import BeerCreate from "../BeerCreate";
 import { Link } from "react-router-dom";
+import { fetchBeers } from "../../api/api";
 
 function BeerList3() {
   const [beers, setBeers] = useState([]);
@@ -11,12 +12,10 @@ function BeerList3() {
 
   useEffect(() => {
     const dataFetch = async () => {
-      const data = await (
-        await fetch("http://localhost:8080/api/v1/beers")
-      ).json();
+      const data = await fetchBeers();
 
-      setBeers(data.items);
       setIsLoading(false);
+      setBeers(data);
     };
 
     dataFetch();
