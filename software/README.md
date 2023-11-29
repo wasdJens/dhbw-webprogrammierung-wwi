@@ -42,3 +42,14 @@
 ![image](https://user-images.githubusercontent.com/24612796/194081119-7ad9c485-cbf3-43db-8ec5-d16ded4d2c3e.png)
 - Sie sollten nun einen Ordner "__DHBW" haben
 
+## Postman Collection in Hoppscotch importieren
+
+- Öffnen Sie Hoppscotch ![image](https://github.com/wasdJens/dhbw-webprogrammierung-wwi/assets/24612796/8fbf1951-d6e8-4943-9ea1-bc33299e8c38)
+- Laden Sie sich die [`__DHBW.postman_collection.json`](https://github.com/wasdJens/dhbw-webprogrammierung-wwi/blob/master/software/__DHBW.postman_collection.json) Datei aus Github herunter:
+  - Die wo GIT schon kennen dürfen sich natürlich auch das Repo klonen ;)
+  - Wenn Sie die ZIP heruntergeladen haben entpacken Sie diese und öffnen den Ordner software
+![image](https://user-images.githubusercontent.com/24612796/194080475-3fc0e4df-c2f7-47c0-baaa-752285bd5bd9.png)
+- Klicken Sie in Hoppscotch auf "Import" und dann auf "Import from Postman"
+![image](https://github.com/wasdJens/dhbw-webprogrammierung-wwi/assets/24612796/5f2e5fc3-52c7-4684-b0ca-85f73c367070)
+![image](https://github.com/wasdJens/dhbw-webprogrammierung-wwi/assets/24612796/913405f2-7818-43dd-b8f4-630cbaf6100d)
+- Wählen Sie die Postman Collection aus dem Ordner Software
