@@ -11,10 +11,15 @@
  
 - Postman 
    - Offizielle Webseite https://www.postman.com/
-   - Sie benötigen **KEINEN** Account für die Nutzung von Postman
+   - ~~Sie benötigen **KEINEN** Account für die Nutzung von Postman~~ Stand 2023 November: Für das importieren braucht man einen Account Sie können alternativ Hoppscotch verwenden
    - Im Ordner "Software" befindet sich auch die Postman Collection die Sie importieren können
    - Die Collection wird im Laufe der Vorlesung vermutlich auch immer wieder geupdated - Ab und zu diese neu zu importieren kann sich also lohnen
-  
+
+- Hoppscotch (Alternative zu Postman)
+   - https://hoppscotch.com/download
+   - Eine freie und kostenlose Alternative zu Postman
+   - Sie können alle Postman Collections hier auch importieren
+
  - Google Chrome als Web Browser
    - Offizielle Webseite https://www.google.com/chrome/
    - Andere Browser können Sie auch verwenden. Die Beispiele aus der Vorlesung werden wir aber alle mit Chrome machen
