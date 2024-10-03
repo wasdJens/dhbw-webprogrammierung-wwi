@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "DHBW - Web Programmierung",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
