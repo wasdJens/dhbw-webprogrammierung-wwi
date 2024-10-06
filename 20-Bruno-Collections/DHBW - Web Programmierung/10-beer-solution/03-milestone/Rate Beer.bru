@@ -1,0 +1,24 @@
+meta {
+  name: Rate Beer
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/beer/rateBeer
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "beer": {
+      "name": "Nattheimer Spezial",
+      "taste": "Good",
+      "brand": "Nattheimer",
+      "amount": 0,
+      "rating": 1
+    },
+    "rating": 5
+  }
+}

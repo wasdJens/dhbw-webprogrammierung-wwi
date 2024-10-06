@@ -1,0 +1,18 @@
+{
+  "name": "dhbw-wwi-fastify-sample-app",
+  "version": "1.0.0",
+  "description": "A collection of different fastify implementations for the dhbw wwi lecture",
+  "main": "index.js",
+  "scripts": {
+    "start:01": "node 01-server.js",
+    "start:02": "node ./02-plugins/server.js",
+    "start:03": "node ./03-body/server.js",
+    "start:04": "node ./04-json-schema/server.js"
+  },
+  "author": "Jens Reiner",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "fastify": "^5.0.0"
+  }
+}

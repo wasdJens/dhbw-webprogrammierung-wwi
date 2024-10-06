@@ -1,0 +1,15 @@
+meta {
+  name: 02-user-create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {}
+}
