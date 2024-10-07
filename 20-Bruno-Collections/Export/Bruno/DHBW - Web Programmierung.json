@@ -1,0 +1,534 @@
+{
+  "name": "DHBW - Web Programmierung",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "02-nodejs",
+      "items": [
+        {
+          "type": "folder",
+          "name": "01-http-webserver",
+          "items": [
+            {
+              "type": "http",
+              "name": "01-http-webserver",
+              "seq": 1,
+              "request": {
+                "url": "http://localhost:8080",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "03-webserver-header-any",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080",
+                "method": "GET",
+                "headers": [
+                  {
+                    "name": "accept",
+                    "value": "text/*",
+                    "enabled": true
+                  }
+                ],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "03-webserver-header-html",
+              "seq": 3,
+              "request": {
+                "url": "http://localhost:8080",
+                "method": "GET",
+                "headers": [
+                  {
+                    "name": "accept",
+                    "value": "text/*",
+                    "enabled": true
+                  }
+                ],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "03-webserver-header-json",
+              "seq": 4,
+              "request": {
+                "url": "http://localhost:8080",
+                "method": "GET",
+                "headers": [
+                  {
+                    "name": "accept",
+                    "value": "application/json",
+                    "enabled": true
+                  }
+                ],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "03-backend",
+      "items": [
+        {
+          "type": "http",
+          "name": "00-api-draft",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:8080/beers",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "01-api-http-methods-create-beer",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:8080/beers",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "01-api-http-methods-get-beers",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:8080/beers",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "folder",
+          "name": "01-fastify",
+          "items": [
+            {
+              "type": "http",
+              "name": "01-server-get-test",
+              "seq": 1,
+              "request": {
+                "url": "http://localhost:8080/test",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "01-server-get",
+              "seq": 3,
+              "request": {
+                "url": "http://localhost:8080/",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "01-server-post",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "folder",
+              "name": "02-plugins",
+              "items": [
+                {
+                  "type": "http",
+                  "name": "02-user-create",
+                  "seq": 2,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "POST",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                },
+                {
+                  "type": "http",
+                  "name": "02-user-delete",
+                  "seq": 4,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "DELETE",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                },
+                {
+                  "type": "http",
+                  "name": "02-user-read",
+                  "seq": 1,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "GET",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "none",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                },
+                {
+                  "type": "http",
+                  "name": "02-user-update",
+                  "seq": 3,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "PUT",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "03-body",
+              "items": [
+                {
+                  "type": "http",
+                  "name": "03-user-create-body",
+                  "seq": 1,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "POST",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "04-json-schema",
+              "items": [
+                {
+                  "type": "http",
+                  "name": "04-user-create-wrong-body",
+                  "seq": 1,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "POST",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "10-beer-solution",
+      "items": [
+        {
+          "type": "folder",
+          "name": "03-milestone",
+          "items": [
+            {
+              "type": "http",
+              "name": "Create Beer",
+              "seq": 1,
+              "request": {
+                "url": "http://localhost:8080/beer/createBeer",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\"\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Drink Beer",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080/beer/drinkBeer",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\",\n  \"amount\": 0,\n  \"rating\": 1\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Rate Beer",
+              "seq": 3,
+              "request": {
+                "url": "http://localhost:8080/beer/rateBeer",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"beer\": {\n    \"name\": \"Nattheimer Spezial\",\n    \"taste\": \"Good\",\n    \"brand\": \"Nattheimer\",\n    \"amount\": 0,\n    \"rating\": 1\n  },\n  \"rating\": 5\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "DHBW - Web Programmierung",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}

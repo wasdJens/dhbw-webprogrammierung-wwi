@@ -1,0 +1,483 @@
+{
+  "info": {
+    "name": "DHBW - Web Programmierung",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "02-nodejs",
+      "item": [
+        {
+          "name": "01-http-webserver",
+          "item": [
+            {
+              "name": "01-http-webserver",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "03-webserver-header-any",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/*",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "03-webserver-header-html",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/*",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "03-webserver-header-json",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03-backend",
+      "item": [
+        {
+          "name": "00-api-draft",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/beers",
+              "host": [
+                "localhost"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "01-api-http-methods-create-beer",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/beers",
+              "host": [
+                "localhost"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "01-api-http-methods-get-beers",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/beers",
+              "host": [
+                "localhost"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "01-fastify",
+          "item": [
+            {
+              "name": "01-server-get-test",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/test",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "01-server-get",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "01-server-post",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "02-plugins",
+              "item": [
+                {
+                  "name": "02-user-create",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "02-user-delete",
+                  "event": [],
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "02-user-read",
+                  "event": [],
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    }
+                  }
+                },
+                {
+                  "name": "02-user-update",
+                  "event": [],
+                  "request": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "03-body",
+              "item": [
+                {
+                  "name": "03-user-create-body",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "04-json-schema",
+              "item": [
+                {
+                  "name": "04-user-create-wrong-body",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "10-beer-solution",
+      "item": [
+        {
+          "name": "03-milestone",
+          "item": [
+            {
+              "name": "Create Beer",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/beer/createBeer",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Drink Beer",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/beer/drinkBeer",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\",\n  \"amount\": 0,\n  \"rating\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Rate Beer",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/beer/rateBeer",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"beer\": {\n    \"name\": \"Nattheimer Spezial\",\n    \"taste\": \"Good\",\n    \"brand\": \"Nattheimer\",\n    \"amount\": 0,\n    \"rating\": 1\n  },\n  \"rating\": 5\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bruno",
+      "event": []
+    }
+  ],
+  "variable": []
+}
