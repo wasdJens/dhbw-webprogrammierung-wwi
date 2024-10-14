@@ -1,0 +1,17 @@
+meta {
+  name: HTTP Body
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/body
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Jens Reiner"
+  }
+}
