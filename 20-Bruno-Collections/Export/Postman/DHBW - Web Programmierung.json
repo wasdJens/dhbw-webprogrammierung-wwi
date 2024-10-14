@@ -221,6 +221,68 @@
               }
             },
             {
+              "name": "03-body",
+              "item": [
+                {
+                  "name": "03-user-create-body",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "04-json-schema",
+              "item": [
+                {
+                  "name": "04-user-create-wrong-body",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/user",
+                      "host": [
+                        "localhost"
+                      ],
+                      "path": [],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
               "name": "02-plugins",
               "item": [
                 {
@@ -319,68 +381,6 @@
                   }
                 }
               ]
-            },
-            {
-              "name": "03-body",
-              "item": [
-                {
-                  "name": "03-user-create-body",
-                  "event": [],
-                  "request": {
-                    "method": "POST",
-                    "header": [],
-                    "url": {
-                      "raw": "http://localhost:8080/user",
-                      "host": [
-                        "localhost"
-                      ],
-                      "path": [],
-                      "query": [],
-                      "variable": []
-                    },
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"name\": \"Nicht Jens\"\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "name": "04-json-schema",
-              "item": [
-                {
-                  "name": "04-user-create-wrong-body",
-                  "event": [],
-                  "request": {
-                    "method": "POST",
-                    "header": [],
-                    "url": {
-                      "raw": "http://localhost:8080/user",
-                      "host": [
-                        "localhost"
-                      ],
-                      "path": [],
-                      "query": [],
-                      "variable": []
-                    },
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"name\": \"Nicht Jens\"\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
             }
           ]
         }
@@ -467,6 +467,153 @@
                       "language": "json"
                     }
                   }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "30-miscellaneous",
+      "item": [
+        {
+          "name": "02-http-explorer",
+          "item": [
+            {
+              "name": "HTTP Headers",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-custom-header",
+                    "value": "foo",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/header",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "Ping",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/ping",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "HTTP Body",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/body",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Jens Reiner\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Options Ping",
+              "event": [],
+              "request": {
+                "method": "OPTIONS",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/ping",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "HTTP Status Codes",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/status",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": 200\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Cat 😽",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://http.cat/200",
+                  "host": [
+                    "http",
+                    "cat"
+                  ],
+                  "path": [],
+                  "query": [],
+                  "variable": []
                 }
               }
             }

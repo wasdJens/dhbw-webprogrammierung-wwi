@@ -273,6 +273,66 @@
             },
             {
               "type": "folder",
+              "name": "03-body",
+              "items": [
+                {
+                  "type": "http",
+                  "name": "03-user-create-body",
+                  "seq": 1,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "POST",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "04-json-schema",
+              "items": [
+                {
+                  "type": "http",
+                  "name": "04-user-create-wrong-body",
+                  "seq": 1,
+                  "request": {
+                    "url": "http://localhost:8080/user",
+                    "method": "POST",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "mode": "json",
+                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "folder",
               "name": "02-plugins",
               "items": [
                 {
@@ -371,66 +431,6 @@
                   }
                 }
               ]
-            },
-            {
-              "type": "folder",
-              "name": "03-body",
-              "items": [
-                {
-                  "type": "http",
-                  "name": "03-user-create-body",
-                  "seq": 1,
-                  "request": {
-                    "url": "http://localhost:8080/user",
-                    "method": "POST",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "mode": "json",
-                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
-                      "formUrlEncoded": [],
-                      "multipartForm": []
-                    },
-                    "script": {},
-                    "vars": {},
-                    "assertions": [],
-                    "tests": "",
-                    "auth": {
-                      "mode": "none"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "folder",
-              "name": "04-json-schema",
-              "items": [
-                {
-                  "type": "http",
-                  "name": "04-user-create-wrong-body",
-                  "seq": 1,
-                  "request": {
-                    "url": "http://localhost:8080/user",
-                    "method": "POST",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "mode": "json",
-                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
-                      "formUrlEncoded": [],
-                      "multipartForm": []
-                    },
-                    "script": {},
-                    "vars": {},
-                    "assertions": [],
-                    "tests": "",
-                    "auth": {
-                      "mode": "none"
-                    }
-                  }
-                }
-              ]
             }
           ]
         }
@@ -504,6 +504,165 @@
                 "body": {
                   "mode": "json",
                   "json": "{\n  \"beer\": {\n    \"name\": \"Nattheimer Spezial\",\n    \"taste\": \"Good\",\n    \"brand\": \"Nattheimer\",\n    \"amount\": 0,\n    \"rating\": 1\n  },\n  \"rating\": 5\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "30-miscellaneous",
+      "items": [
+        {
+          "type": "folder",
+          "name": "02-http-explorer",
+          "items": [
+            {
+              "type": "http",
+              "name": "HTTP Headers",
+              "seq": 1,
+              "request": {
+                "url": "http://localhost:8080/header",
+                "method": "GET",
+                "headers": [
+                  {
+                    "name": "x-custom-header",
+                    "value": "foo",
+                    "enabled": true
+                  }
+                ],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Ping",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080/ping",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "HTTP Body",
+              "seq": 3,
+              "request": {
+                "url": "http://localhost:8080/body",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Jens Reiner\"\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Options Ping",
+              "seq": 4,
+              "request": {
+                "url": "http://localhost:8080/ping",
+                "method": "OPTIONS",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "HTTP Status Codes",
+              "seq": 5,
+              "request": {
+                "url": "http://localhost:8080/status",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"status\": 200\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Cat 😽",
+              "seq": 6,
+              "request": {
+                "url": "https://http.cat/200",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
                   "formUrlEncoded": [],
                   "multipartForm": []
                 },
