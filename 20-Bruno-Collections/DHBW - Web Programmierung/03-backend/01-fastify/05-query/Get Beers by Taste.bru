@@ -1,0 +1,15 @@
+meta {
+  name: Get Beers by Taste
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/beer?taste=good
+  body: none
+  auth: none
+}
+
+params:query {
+  taste: good
+}

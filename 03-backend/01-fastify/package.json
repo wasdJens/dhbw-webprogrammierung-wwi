@@ -7,7 +7,8 @@
     "start:01": "node 01-server.js",
     "start:02": "node ./02-plugins/server.js",
     "start:03": "node ./03-body/server.js",
-    "start:04": "node ./04-json-schema/server.js"
+    "start:04": "node ./04-json-schema/server.js",
+    "start:05": "node ./05-query/server.js"
   },
   "author": "Jens Reiner",
   "license": "MIT",
