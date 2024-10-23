@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Einführung</title>
+  </head>
+  <body>
+    <h1>DOM Einführung</h1>
+
+    <label for="newText">Text hinzufügen:</label>
+    <input type="text" id="newText" placeholder="Gib einen Text ein" />
+    <button id="addElement">Neues Element hinzufügen</button>
+
+    <div id="newElements"></div>
+
+    <script>
+      const introParagraph = document.getElementById("intro");
+      const addElementButton = document.getElementById("addElement");
+      const newTextInput = document.getElementById("newText");
+      const newElementsDiv = document.getElementById("newElements");
+
+      addElementButton.addEventListener("click", () => {
+        const userInput = newTextInput.value.trim();
+        if (userInput) {
+          const newParagraph = document.createElement("p");
+          newParagraph.textContent = userInput;
+          newElementsDiv.appendChild(newParagraph);
+          newTextInput.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

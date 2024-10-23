@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beer List</title>
+  </head>
+  <body>
+    <h1>Beer List</h1>
+
+    <script>
+      const beers = [
+        {
+          name: "Nattheimer Spezial",
+          taste: "Good",
+          brand: "Nattheimer",
+          amount: 6,
+          rating: 4,
+          id: 1,
+        },
+        {
+          name: "Goldochsen Kellerbier",
+          taste: "Super",
+          brand: "Goldochsen",
+          amount: 0,
+          rating: 1,
+          id: 2,
+        },
+      ];
+
+      renderBeerList();
+
+      function buildBeerCard(props) {
+        const beerListElement = document.createElement("div");
+        beerListElement.classList.add("beer-list-element");
+
+        const beerName = createBeerProperty("h2", props.name);
+        beerListElement.appendChild(beerName);
+
+        const beerTaste = createBeerProperty("p", `Taste: ${props.taste}`);
+        beerListElement.appendChild(beerTaste);
+
+        const beerBrand = createBeerProperty("p", `Brand: ${props.brand}`);
+        beerListElement.appendChild(beerBrand);
+
+        const beerAmount = createBeerProperty("p", `Amount: ${props.amount}`);
+        beerListElement.appendChild(beerAmount);
+
+        const beerRating = createBeerProperty("p", `Rating: ${props.rating}`);
+        beerListElement.appendChild(beerRating);
+
+        return beerListElement;
+      }
+
+      function createBeerProperty(element, value) {
+        const beerProperty = document.createElement(element);
+        beerProperty.textContent = value;
+        return beerProperty;
+      }
+
+      function renderBeerList() {
+        const beerList = document.createElement("ul");
+        beerList.classList.add("beer-list");
+
+        beers.forEach((beer) => {
+          const beerListElement = document.createElement("li");
+          const beerCardElement = buildBeerCard(beer);
+
+          beerListElement.appendChild(beerCardElement);
+          beerList.appendChild(beerListElement);
+        });
+
+        document.body.appendChild(beerList);
+      }
+    </script>
+  </body>
+</html>
