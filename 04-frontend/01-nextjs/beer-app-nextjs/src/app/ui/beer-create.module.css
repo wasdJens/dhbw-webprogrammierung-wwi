@@ -1,0 +1,59 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  width: 100%;
+}
+
+.layout form {
+  padding: 64px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--mountbatten-pink);
+  border-radius: 8px;
+}
+
+.layout form h1 {
+  color: var(--text-primary);
+}
+
+.layout form label {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.layout form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.layout form input:focus {
+  border-color: var(--penn-blue);
+  box-shadow: 0px 0px 4px rgba(0, 112, 243, 0.2);
+  outline: none;
+}
+
+.layout form button {
+  width: 25%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--penn-blue);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.layout form button:hover:not(:disabled) {
+  background-color: var(--cool-gray);
+}

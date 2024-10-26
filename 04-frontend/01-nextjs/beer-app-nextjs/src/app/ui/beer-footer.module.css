@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  height: 128px;
+  background-color: var(--cool-gray);
+  padding: 32px 32px;
+  color: var(--text-primary);
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

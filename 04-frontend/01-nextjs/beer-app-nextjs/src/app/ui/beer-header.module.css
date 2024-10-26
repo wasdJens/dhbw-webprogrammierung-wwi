@@ -1,0 +1,47 @@
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+  background-color: var(--penn-blue);
+  color: var(--text-primary);
+  padding: 0px 16px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+}
+
+.navigation a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.shake {
+  display: inline-block;
+  animation: shake 0.5s ease-in-out;
+}
+
+.prost {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--text-primary);
+}

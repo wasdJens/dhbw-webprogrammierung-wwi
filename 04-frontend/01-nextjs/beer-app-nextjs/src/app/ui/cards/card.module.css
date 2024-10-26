@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 32px;
+  width: 256px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--dun);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
