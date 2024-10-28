@@ -1,0 +1,15 @@
+<app-card [card]="{ title: beer.name, subtitle: beer.brand }">
+  <div class="content" ngProjectAs="card-content">
+    <app-beer-mug
+      [rating]="beer.rating"
+      (clickEvent)="handleDrink()"
+    ></app-beer-mug>
+  </div>
+  <div class="footer" ngProjectAs="card-footer">
+    <app-beer-rating-slider
+      [currentRating]="beer.rating"
+      (ratingSelect)="handleRatingSelect($event)"
+    ></app-beer-rating-slider>
+    <h4>{{ beer.amount }}</h4>
+  </div>
+</app-card>

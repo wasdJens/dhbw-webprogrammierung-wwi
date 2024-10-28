@@ -1,0 +1,6 @@
+<div class="list">
+  @for(beer of beers$ | async; track beer.id) {
+    <app-beer-card [beer]="beer"></app-beer-card>
+  }
+  <app-beer-create-card></app-beer-create-card>
+</div>

@@ -1,0 +1,111 @@
+<svg
+  class="beerMug"
+  width="100"
+  height="150"
+  viewBox="0 0 100 150"
+  xmlns="http://www.w3.org/2000/svg"
+  (click)="handleClick()"
+>
+  <defs>
+    <pattern
+      id="glassPattern"
+      width="15"
+      height="20"
+      patternUnits="userSpaceOnUse"
+    >
+      <rect width="15" height="20" fill="rgba(255, 255, 255, 0.2)" />
+      <circle cx="7.5" cy="10" r="6" fill="rgba(255, 255, 255, 0.1)" />
+    </pattern>
+  </defs>
+
+  <rect
+    x="10"
+    y="10"
+    width="60"
+    height="130"
+    rx="10"
+    ry="10"
+    fill="url(#glassPattern)"
+    stroke="#8b8b8b"
+    strokeWidth="2"
+  />
+
+  <rect
+    x="70"
+    y="30"
+    width="15"
+    height="90"
+    rx="8"
+    ry="8"
+    fill="none"
+    stroke="#8b8b8b"
+    strokeWidth="2"
+  />
+
+  <rect
+    x="10"
+    [attr.y]="fillY"
+    width="60"
+    [attr.height]="fillHeight"
+    rx="10"
+    ry="10"
+    fill="#F8D568"
+  />
+
+  @if (rating > 1) {
+  <circle class="bubble" cx="30" [attr.cy]="fillY + 15" r="3" fill="#FFF5E1" />
+  <circle class="bubble" cx="50" [attr.cy]="fillY + 25" r="2" fill="#FFF5E1" />
+  <circle class="bubble" cx="40" [attr.cy]="fillY + 35" r="4" fill="#FFF5E1" />
+  }
+
+  <ellipse
+    cx="40"
+    [attr.cy]="fillY"
+    rx="30"
+    [attr.ry]="foamHeight"
+    fill="#FFF5E1"
+    stroke="#e1d5c9"
+    strokeWidth="1"
+  />
+
+  @if( rating === 5) {
+  <ellipse
+    cx="40"
+    [attr.cy]="fillY - foamHeight"
+    rx="30"
+    ry="15"
+    fill="#FFF5E1"
+    stroke="#e1d5c9"
+    strokeWidth="2"
+    class="overflowFoam"
+  />
+  }
+
+  <rect
+    x="15"
+    y="15"
+    width="5"
+    height="120"
+    fill="rgba(255, 255, 255, 0.3)"
+    rx="2"
+    ry="2"
+  />
+  <rect
+    x="40"
+    y="15"
+    width="3"
+    height="120"
+    fill="rgba(255, 255, 255, 0.2)"
+    rx="2"
+    ry="2"
+  />
+  <rect
+    x="55"
+    y="15"
+    width="3"
+    height="120"
+    fill="rgba(255, 255, 255, 0.2)"
+    rx="2"
+    ry="2"
+  />
+</svg>

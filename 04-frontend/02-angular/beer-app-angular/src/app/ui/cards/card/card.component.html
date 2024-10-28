@@ -1,0 +1,9 @@
+<div class="card">
+  <app-card-header [card]="card"></app-card-header>
+  <app-card-content>
+    <ng-content select="card-content"></ng-content>
+  </app-card-content>
+  <app-card-footer>
+    <ng-content select="card-footer"></ng-content>
+  </app-card-footer>
+</div>

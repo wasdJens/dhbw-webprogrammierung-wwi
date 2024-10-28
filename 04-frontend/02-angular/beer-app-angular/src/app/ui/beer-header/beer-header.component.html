@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="title">
+    <h1>Beer App</h1>
+    <h1
+      (mouseenter)="isHovered = true"
+      (mouseleave)="isHovered = false"
+      [class]="isHovered ? 'shake' : ''"
+    >
+      🍻
+      @if (isHovered) {
+        <span class="prost">Prost!</span>
+      }
+    </h1>
+  </div>
+  <nav class="navigation">
+    <a routerLink="/">🍺 Home</a>
+    <a
+      href="https://www.bierbewusstgeniessen.de/drink-responsibly/"
+      target="_blank"
+    >
+      ⚠️ Drink Responsible
+    </a>
+  </nav>
+</div>
