@@ -34,11 +34,11 @@ export function BeerCard({ providedBeer }) {
         <BeerMug rating={beer.rating} onClick={handleDrink}></BeerMug>
       </div>
       <div className={styles.footer}>
-        <h4>{beer.amount}</h4>
         <BeerRatingSlider
           currentRating={beer.rating}
           onRatingSelect={handleRatingSelect}
         ></BeerRatingSlider>
+        <h4>{beer.amount}</h4>
       </div>
     </Card>
   );
