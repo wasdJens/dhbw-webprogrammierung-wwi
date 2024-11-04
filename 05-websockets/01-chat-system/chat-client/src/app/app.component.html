@@ -1,0 +1,13 @@
+<h1>DHBW Live Chat</h1>
+<h2>Websocket Sample</h2>
+
+<p>Connected users: {{ connectedUsers$ | async }}</p>
+
+<p>Messages: </p>
+<ul>
+  @for (message of messages$ | async; track $index) {
+    <li>{{message | json}}</li>
+  }
+</ul>
+
+<button (click)="handleSend()">Send Message</button>

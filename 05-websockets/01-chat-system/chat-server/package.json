@@ -1,0 +1,16 @@
+{
+  "name": "dhbw-fastify-chat-server",
+  "version": "1.0.0",
+  "description": "A sample implementation how to use websockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "author": "Jens Reiner",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@fastify/websocket": "^11.0.1",
+    "fastify": "^5.1.0"
+  }
+}
