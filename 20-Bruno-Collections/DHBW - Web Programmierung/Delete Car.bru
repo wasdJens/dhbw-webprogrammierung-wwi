@@ -1,0 +1,17 @@
+meta {
+  name: Delete Car
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8080/cars
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 0
+  }
+}

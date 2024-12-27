@@ -1,0 +1,18 @@
+meta {
+  name: Create Car
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/cars
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Mercedes Benz EQS",
+    "color": "red"
+  }
+}
