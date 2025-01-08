@@ -3,6 +3,80 @@
   "version": "1",
   "items": [
     {
+      "type": "http",
+      "name": "Create Car",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:8080/cars",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\": \"Mercedes Benz EQS\",\n  \"color\": \"red\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete Car",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8080/cars",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"id\": 0\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Test Car",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8080/cars",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
       "type": "folder",
       "name": "02-nodejs",
       "items": [
@@ -16,7 +90,7 @@
               "seq": 1,
               "request": {
                 "url": "http://localhost:8080",
-                "method": "POST",
+                "method": "GET",
                 "headers": [],
                 "params": [],
                 "body": {
@@ -28,6 +102,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -57,6 +132,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -72,7 +148,7 @@
                 "headers": [
                   {
                     "name": "accept",
-                    "value": "text/*",
+                    "value": "text/html",
                     "enabled": true
                   }
                 ],
@@ -86,6 +162,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -115,6 +192,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -146,6 +224,7 @@
             "vars": {},
             "assertions": [],
             "tests": "",
+            "docs": "",
             "auth": {
               "mode": "none"
             }
@@ -169,6 +248,7 @@
             "vars": {},
             "assertions": [],
             "tests": "",
+            "docs": "",
             "auth": {
               "mode": "none"
             }
@@ -192,6 +272,7 @@
             "vars": {},
             "assertions": [],
             "tests": "",
+            "docs": "",
             "auth": {
               "mode": "none"
             }
@@ -219,6 +300,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -230,11 +312,12 @@
               "seq": 3,
               "request": {
                 "url": "http://localhost:8080/",
-                "method": "GET",
+                "method": "POST",
                 "headers": [],
                 "params": [],
                 "body": {
-                  "mode": "none",
+                  "mode": "json",
+                  "json": "{}",
                   "formUrlEncoded": [],
                   "multipartForm": []
                 },
@@ -242,6 +325,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -266,6 +350,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -286,7 +371,7 @@
                     "params": [],
                     "body": {
                       "mode": "json",
-                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "json": "{\n  \"name\": \"Test Jens\"\n}",
                       "formUrlEncoded": [],
                       "multipartForm": []
                     },
@@ -294,6 +379,7 @@
                     "vars": {},
                     "assertions": [],
                     "tests": "",
+                    "docs": "",
                     "auth": {
                       "mode": "none"
                     }
@@ -316,7 +402,7 @@
                     "params": [],
                     "body": {
                       "mode": "json",
-                      "json": "{\n  \"name\": \"Nicht Jens\"\n}",
+                      "json": "{\n  \"alter\": \"Nicht Jens\"\n}",
                       "formUrlEncoded": [],
                       "multipartForm": []
                     },
@@ -324,6 +410,44 @@
                     "vars": {},
                     "assertions": [],
                     "tests": "",
+                    "docs": "",
+                    "auth": {
+                      "mode": "none"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "05-query",
+              "items": [
+                {
+                  "type": "http",
+                  "name": "Get Beers by Taste",
+                  "seq": 1,
+                  "request": {
+                    "url": "http://localhost:8080/beer?taste=good",
+                    "method": "GET",
+                    "headers": [],
+                    "params": [
+                      {
+                        "name": "taste",
+                        "value": "good",
+                        "type": "query",
+                        "enabled": true
+                      }
+                    ],
+                    "body": {
+                      "mode": "none",
+                      "formUrlEncoded": [],
+                      "multipartForm": []
+                    },
+                    "script": {},
+                    "vars": {},
+                    "assertions": [],
+                    "tests": "",
+                    "docs": "",
                     "auth": {
                       "mode": "none"
                     }
@@ -354,6 +478,7 @@
                     "vars": {},
                     "assertions": [],
                     "tests": "",
+                    "docs": "",
                     "auth": {
                       "mode": "none"
                     }
@@ -378,6 +503,7 @@
                     "vars": {},
                     "assertions": [],
                     "tests": "",
+                    "docs": "",
                     "auth": {
                       "mode": "none"
                     }
@@ -388,7 +514,7 @@
                   "name": "02-user-read",
                   "seq": 1,
                   "request": {
-                    "url": "http://localhost:8080/user",
+                    "url": "http://localhost:8080/user/",
                     "method": "GET",
                     "headers": [],
                     "params": [],
@@ -401,6 +527,7 @@
                     "vars": {},
                     "assertions": [],
                     "tests": "",
+                    "docs": "",
                     "auth": {
                       "mode": "none"
                     }
@@ -425,6 +552,7 @@
                     "vars": {},
                     "assertions": [],
                     "tests": "",
+                    "docs": "",
                     "auth": {
                       "mode": "none"
                     }
@@ -463,6 +591,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -487,6 +616,32 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Get Beers",
+              "seq": 4,
+              "request": {
+                "url": "http://localhost:8090/beer/mostDrankBeer",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\"\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -511,6 +666,361 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "04-milestone",
+          "items": [
+            {
+              "type": "http",
+              "name": "Best Beer",
+              "seq": 5,
+              "request": {
+                "url": "http://localhost:8080/beer/best",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Create Beer",
+              "seq": 1,
+              "request": {
+                "url": "http://localhost:8080/beer",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Festbier\",\n  \"taste\": \"Good\",\n  \"brand\": \"Ulmer Goldochsen\"\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Drink Beer",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080/beer/0/drink",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\",\n  \"amount\": 0,\n  \"rating\": 1\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Get All",
+              "seq": 4,
+              "request": {
+                "url": "http://localhost:8080/beer",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Get Single Beer",
+              "seq": 7,
+              "request": {
+                "url": "http://localhost:8080/beer/1",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Most Drank",
+              "seq": 6,
+              "request": {
+                "url": "http://localhost:8080/beer/most",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Rate Beer",
+              "seq": 3,
+              "request": {
+                "url": "http://localhost:8080/beer/1/rate",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"rating\": 4\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "05-milestone",
+          "items": [
+            {
+              "type": "http",
+              "name": "Best Beer",
+              "seq": 5,
+              "request": {
+                "url": "http://localhost:8080/beer/best",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Create Beer",
+              "seq": 1,
+              "request": {
+                "url": "http://localhost:8080/beer",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\"\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Drink Beer",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080/beer/1/drink",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"name\": \"Nattheimer Spezial\",\n  \"taste\": \"Good\",\n  \"brand\": \"Nattheimer\",\n  \"amount\": 0,\n  \"rating\": 1\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Get All",
+              "seq": 4,
+              "request": {
+                "url": "http://localhost:8080/beer",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Get Single Beer",
+              "seq": 7,
+              "request": {
+                "url": "http://localhost:8080/beer/0",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Most Drank",
+              "seq": 6,
+              "request": {
+                "url": "http://localhost:8080/beer/most",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "none",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Rate Beer",
+              "seq": 3,
+              "request": {
+                "url": "http://localhost:8080/beer/1/rate",
+                "method": "POST",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{\n  \"rating\": 4\n}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -530,18 +1040,12 @@
           "items": [
             {
               "type": "http",
-              "name": "HTTP Headers",
-              "seq": 1,
+              "name": "Cat 😽",
+              "seq": 6,
               "request": {
-                "url": "http://localhost:8080/header",
+                "url": "https://http.cat/200",
                 "method": "GET",
-                "headers": [
-                  {
-                    "name": "x-custom-header",
-                    "value": "foo",
-                    "enabled": true
-                  }
-                ],
+                "headers": [],
                 "params": [],
                 "body": {
                   "mode": "none",
@@ -552,30 +1056,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
-                "auth": {
-                  "mode": "none"
-                }
-              }
-            },
-            {
-              "type": "http",
-              "name": "Ping",
-              "seq": 2,
-              "request": {
-                "url": "http://localhost:8080/ping",
-                "method": "GET",
-                "headers": [],
-                "params": [],
-                "body": {
-                  "mode": "json",
-                  "json": "{}",
-                  "formUrlEncoded": [],
-                  "multipartForm": []
-                },
-                "script": {},
-                "vars": {},
-                "assertions": [],
-                "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -600,6 +1081,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -607,12 +1089,18 @@
             },
             {
               "type": "http",
-              "name": "Options Ping",
-              "seq": 4,
+              "name": "HTTP Headers",
+              "seq": 1,
               "request": {
-                "url": "http://localhost:8080/ping",
-                "method": "OPTIONS",
-                "headers": [],
+                "url": "http://localhost:8080/header",
+                "method": "GET",
+                "headers": [
+                  {
+                    "name": "x-custom-header",
+                    "value": "foo",
+                    "enabled": true
+                  }
+                ],
                 "params": [],
                 "body": {
                   "mode": "none",
@@ -623,6 +1111,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -647,6 +1136,7 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
@@ -654,11 +1144,11 @@
             },
             {
               "type": "http",
-              "name": "Cat 😽",
-              "seq": 6,
+              "name": "Options Ping",
+              "seq": 4,
               "request": {
-                "url": "https://http.cat/200",
-                "method": "GET",
+                "url": "http://localhost:8080/ping",
+                "method": "OPTIONS",
                 "headers": [],
                 "params": [],
                 "body": {
@@ -670,6 +1160,32 @@
                 "vars": {},
                 "assertions": [],
                 "tests": "",
+                "docs": "",
+                "auth": {
+                  "mode": "none"
+                }
+              }
+            },
+            {
+              "type": "http",
+              "name": "Ping",
+              "seq": 2,
+              "request": {
+                "url": "http://localhost:8080/ping",
+                "method": "GET",
+                "headers": [],
+                "params": [],
+                "body": {
+                  "mode": "json",
+                  "json": "{}",
+                  "formUrlEncoded": [],
+                  "multipartForm": []
+                },
+                "script": {},
+                "vars": {},
+                "assertions": [],
+                "tests": "",
+                "docs": "",
                 "auth": {
                   "mode": "none"
                 }
