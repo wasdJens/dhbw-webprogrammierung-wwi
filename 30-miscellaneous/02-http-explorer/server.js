@@ -1,21 +1,34 @@
 import Fastify from "fastify";
+import cors from "@fastify/cors";
+
 const fastify = Fastify({
   logger: true,
 });
 
+fastify.register(cors, {
+  origin: (origin, callback) => {
+    const allowedOrigins = ["http://localhost:3000", "http://localhost:4200"];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+});
+
 fastify.all("/ping", (request, reply) => {
   console.log(request.method);
-  if (request.method === 'OPTIONS') {
+  if (request.method === "OPTIONS") {
     reply
-    .header("allow", "GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS")
-    .status(204)
-    .send();
+      .header("allow", "GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS")
+      .status(204)
+      .send();
   } else {
     const response = {
       message: "Pong",
       method: request.method,
     };
-  
+
     reply.send(response);
   }
 });
@@ -43,14 +56,15 @@ fastify.post("/body", (request, reply) => {
 
 fastify.post("/status", (request, reply) => {
   const response = {
-    message: 'Modify the status code in the client body to return different status codes',
-    supportedCodes: '200, 201, 301, 400, 401, 403, 404, 500, 503',
+    message:
+      "Modify the status code in the client body to return different status codes",
+    supportedCodes: "200, 201, 301, 400, 401, 403, 404, 500, 503",
   };
 
   switch (request.body.status) {
-    case 200: 
+    case 200:
       reply.status(200);
-      break
+      break;
     case 201:
       reply.status(201);
       break;
@@ -80,7 +94,7 @@ fastify.post("/status", (request, reply) => {
   }
 
   reply.send(response);
-})
+});
 
 try {
   await fastify.listen({ port: 8080 });

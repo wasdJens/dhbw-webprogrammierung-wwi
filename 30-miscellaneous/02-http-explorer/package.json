@@ -10,6 +10,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "@fastify/cors": "^10.0.2",
     "fastify": "^5.0.0"
   }
 }
