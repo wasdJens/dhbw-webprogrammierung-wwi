@@ -222,6 +222,12 @@ try {
 
 ## Kommunikation Frontend <-> Backend
 
+Referenzen:
+
+- Folien: 634, 726
+- Meilensteine: 05-Milestone, 01-nextjs, 02-angular
+-
+
 - Die gesamte Kommunikation zwischen ihrem Server und ihrer Anwendung findet über HTTP statt
 - Der Client ist der aktive Part und "fragt" beim Server nach Informationen (Daten)
 - Über die Route können Sie einen Endpunkt vom Server ansprechen und über die HTTP Methode definieren Sie die Art der Anfrage
