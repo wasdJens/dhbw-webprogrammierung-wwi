@@ -1,4 +1,4 @@
-const fetchPromise = fetch("http://localhost:8080/beer");
+const fetchPromise = fetch("http://localhost:3000/");
 
 fetchPromise
   .then((response) => response.json())
@@ -6,4 +6,4 @@ fetchPromise
     console.log(beers);
   });
 
-console.log("Start getting all beers");
+console.log("Fetch JSON Sample");

@@ -99,12 +99,12 @@ function rateBeer(rating = 1, beer) {
 // Create two beers
 const nattheimerSpezial = createBeer({
   name: "Spezial",
-  taste: "Good",
+  taste: "Ok",
   brand: "Nattheimer",
 });
 const goldOchsenKellerbier = createBeer({
   name: "Kellerbier natürtrüb",
-  taste: "Good",
+  taste: "🤢",
   brand: "Ulmer Gold Ochsen",
 });
 
@@ -115,4 +115,4 @@ rateBeer(5, goldOchsenKellerbier);
 
 console.log("All Beers: ", getBeers());
 console.log("Most Drank Beer: ", getMostDrankBeer());
-console.log("Best Rated Beer: ", getBestRatedBeers());
+console.log("AI: Best Rated Beer: ", getBestRatedBeers());
