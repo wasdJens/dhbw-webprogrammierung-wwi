@@ -1,10 +1,9 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateBeerDto } from './create-beer.dto';
-import { IsInt, IsOptional, IsPositive, Max, Min } from 'class-validator';
+import { IsInt, IsOptional, Max, Min } from 'class-validator';
 
 export class UpdateBeerDto extends PartialType(CreateBeerDto) {
   @IsInt()
-  @IsPositive()
   @IsOptional()
   amount?: number;
 
