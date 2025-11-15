@@ -56,41 +56,65 @@
     animation-delay: 3s;
   }
 
-  .beer-body {
+  .krug-body {
+    fill: rgb(255 255 255 / 0.15);
+    stroke: rgb(255 255 255 / 0.4);
+    stroke-width: 12;
+  }
+
+  .krug-beer {
     filter: drop-shadow(0 25px 45px rgb(208 122 3 / 0.45));
   }
 
-  .beer-highlight {
+  .krug-shine {
     fill: rgb(255 255 255 / 0.25);
     filter: blur(2px);
   }
 
-  .foam-cap {
+  .krug-foam {
     filter: drop-shadow(0 12px 20px rgb(255 231 192 / 0.5));
   }
 
-  .foam-drip {
-    fill: rgb(255 249 227 / 0.85);
-    animation: drip 3s ease-in-out infinite;
+  .foam-bubble {
+    fill: rgb(255 249 227 / 0.9);
+    animation: drip 4s ease-in-out infinite;
   }
 
-  .glass-handle {
+  .krug-handle {
+    fill: rgb(255 255 255 / 0.25);
+    stroke: rgb(255 255 255 / 0.55);
+    stroke-width: 12;
+  }
+
+  .krug-handle-inner {
     fill: none;
-    stroke: #ffd77a;
-    stroke-width: 22;
+    stroke: rgb(255 255 255 / 0.35);
+    stroke-width: 16;
     stroke-linecap: round;
     stroke-linejoin: round;
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
-  .glass-outline {
+  .krug-outline {
     fill: none;
     stroke: rgb(255 255 255 / 0.55);
     stroke-width: 12;
     filter: drop-shadow(0 15px 30px rgb(0 0 0 / 0.25));
   }
 
-  .glass-glow {
+  .krug-base {
+    fill: rgb(255 255 255 / 0.25);
+    stroke: rgb(255 255 255 / 0.4);
+    stroke-width: 6;
+  }
+
+  .krug-dimples ellipse {
+    fill: rgb(255 255 255 / 0.15);
+    stroke: rgb(255 255 255 / 0.25);
+    stroke-width: 4;
+  }
+
+  .beer-illustration .krug-shine {
     fill: none;
     stroke: rgb(255 255 255 / 0.2);
     stroke-width: 20;
