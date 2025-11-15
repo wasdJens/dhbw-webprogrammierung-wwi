@@ -1,0 +1,160 @@
+@if (beer(); as beerDetail) {
+<main class="detail-page">
+  <div class="beer-illustration" aria-hidden="true">
+    <svg viewBox="0 0 400 600">
+      <defs>
+        <linearGradient id="glassShine" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.45)" />
+          <stop offset="40%" stop-color="rgba(255,255,255,0.1)" />
+          <stop offset="70%" stop-color="rgba(255,255,255,0.3)" />
+          <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+        </linearGradient>
+        <linearGradient id="foamGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fffdf3" />
+          <stop offset="100%" stop-color="#ffe7c0" />
+        </linearGradient>
+        <linearGradient id="beerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#ffeba4" />
+          <stop offset="40%" stop-color="#ffc94b" />
+          <stop offset="100%" stop-color="#d07a03" />
+        </linearGradient>
+      </defs>
+      <path
+        class="beer-body"
+        d="M120 40h160v60c0 180-40 330-80 450-40-120-80-270-80-450z"
+        fill="url(#beerGradient)"
+      ></path>
+      <path class="beer-highlight" d="M145 80h30v280c0 40-12 70-30 90"></path>
+      <rect
+        class="foam-cap"
+        x="120"
+        y="15"
+        width="160"
+        height="70"
+        rx="35"
+        fill="url(#foamGradient)"
+      ></rect>
+      <circle class="foam-drip" cx="190" cy="80" r="14"></circle>
+      <circle class="foam-drip" cx="230" cy="70" r="10"></circle>
+      <path class="glass-handle" d="M85 80h35v210c0 35-10 60-35 70"></path>
+      <path
+        class="glass-outline"
+        d="M120 40h160v60c0 180-40 330-80 450-40-120-80-270-80-450z"
+      ></path>
+      <path class="glass-glow" d="M130 50h140v50c0 170-35 310-70 420-35-110-70-250-70-420z"></path>
+      <circle class="shine" cx="145" cy="130" r="60" fill="url(#glassShine)"></circle>
+      <circle class="bubble" cx="200" cy="220" r="10"></circle>
+      <circle class="bubble" cx="240" cy="270" r="7"></circle>
+      <circle class="bubble" cx="210" cy="310" r="6"></circle>
+      <circle class="bubble" cx="230" cy="360" r="5"></circle>
+      <circle class="bubble" cx="260" cy="320" r="6"></circle>
+    </svg>
+  </div>
+  <mat-card class="detail-card">
+    <div class="card-header">
+      <div>
+        <p class="eyebrow">Bierprofil</p>
+        <h1>{{ beerDetail.name }}</h1>
+        <p class="meta">
+          {{ detailForm.controls.brand.value || beerDetail.brand }} ·
+          {{ detailForm.controls.taste.value || beerDetail.taste }} · Bereits getrunken:
+          {{ detailForm.controls.amount.value }} Biere
+        </p>
+      </div>
+      <div class="header-actions">
+        <a mat-stroked-button color="accent" routerLink="/beers">
+          <mat-icon>arrow_back</mat-icon>
+          Zurück zur Übersicht
+        </a>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="readout">
+      <div class="stat">
+        <mat-icon>star_rate</mat-icon>
+        <div>
+          <p>Bewertung</p>
+          <strong> {{ detailForm.controls.rating.value | number : '1.1-1' }} / 5 </strong>
+        </div>
+      </div>
+      <div class="stat">
+        <mat-icon>sports_bar</mat-icon>
+        <div>
+          <p>Bereits getrunken</p>
+          <strong>{{ detailForm.controls.amount.value }} Biere</strong>
+        </div>
+      </div>
+    </div>
+    <form class="detail-form" [formGroup]="detailForm" (ngSubmit)="save()" novalidate>
+      <div class="form-grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" autocomplete="off" />
+          @if (detailForm.controls.name.hasError('required')) {
+          <mat-error>Name ist erforderlich.</mat-error>
+          } @if (detailForm.controls.name.hasError('maxlength')) {
+          <mat-error>Maximal 120 Zeichen.</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Marke / Brauerei</mat-label>
+          <input matInput formControlName="brand" autocomplete="off" />
+          @if (detailForm.controls.brand.hasError('required')) {
+          <mat-error>Marke ist erforderlich.</mat-error>
+          } @if (detailForm.controls.brand.hasError('maxlength')) {
+          <mat-error>Maximal 120 Zeichen.</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Stil / Geschmack</mat-label>
+          <mat-select formControlName="taste">
+            @for (taste of tasteOptions; track taste) {
+            <mat-option [value]="taste">{{ taste }}</mat-option>
+            }
+          </mat-select>
+          @if (detailForm.controls.taste.hasError('required')) {
+          <mat-error>Bitte wähle einen Stil.</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Bereits konsumiert</mat-label>
+          <input matInput type="number" min="0" formControlName="amount" />
+          @if (detailForm.controls.amount.hasError('required')) {
+          <mat-error> Anzahl ist erforderlich. </mat-error>
+          } @if (detailForm.controls.amount.hasError('min')) {
+          <mat-error>Anzahl darf nicht negativ sein.</mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="rating-control">
+        <label>Bewertung aktualisieren</label>
+        <div class="slider-row">
+          <mat-slider min="0" max="5" step="1" discrete showTickMarks>
+            <input formControlName="rating" matSliderThumb />
+          </mat-slider>
+          <span class="rating-value">
+            {{ detailForm.controls.rating.value | number : '1.1-1' }} / 5
+          </span>
+        </div>
+      </div>
+      @if (isSaving()) {
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      }
+      <div class="form-actions">
+        <button mat-flat-button color="primary" type="submit" [disabled]="isSaving()">
+          <mat-icon>save</mat-icon>
+          Änderungen speichern
+        </button>
+        <button mat-stroked-button color="accent" type="button" routerLink="/beers">
+          Abbrechen
+        </button>
+      </div>
+      @if (saveMessage()) {
+      <p class="success">{{ saveMessage() }}</p>
+      } @if (errorMessage()) {
+      <p class="error">{{ errorMessage() }}</p>
+      }
+    </form>
+  </mat-card>
+</main>
+}
