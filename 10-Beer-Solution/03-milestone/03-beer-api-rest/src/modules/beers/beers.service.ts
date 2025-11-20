@@ -65,7 +65,7 @@ export class BeersService {
   async update(
     id: number,
     updateBeerDto: UpdateBeerDto,
-  ): Promise<BeerResponseDto | null> {
+  ): Promise<BeerResponseDto> {
     const beer = await this.beersRepository.findOneBy({ id });
     if (!beer) {
       throw new NotFoundException(`Beer with ID ${id} not found`);
